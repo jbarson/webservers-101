@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jon's Class Shows</title>
+</head>
+<body>
+  <h1>Shows</h1>
+  <h2>Static</h2>
+  <ul>
+    <li>Squid Game</li>
+    <li>Foundation</li>
+    <li>SpongeBob</li>
+    <li>Narcos</li>
+  </ul>
+  <h2>Data Driven</h2>
+  <ul>
+    <% shows.map(show => {%>
+    <li><%= show %></li>
+    <% }) %>
+  </ul>
+  <form action="/shows" method="post">
+    <input type="text" name="show" placeholder="show">
+    <button>Submit</button>
+  </form>
+</body>
+</html>
